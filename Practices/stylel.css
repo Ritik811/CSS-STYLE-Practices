@@ -1,37 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700;900&family=Poppins:wght@200;300;400;600&family=Quicksand:wght@300;400;500;600;700&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap");
+
 /* base rule */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Urbanist", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
 }
 
-
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 
-
-h1,h2,h3,h4,h5,h6{
-    font-family: "Poppins", sans-serif;;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
 }
 
-p,a,li{
-    font-size: 1.8rem;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
-    color: var(--para-color);
-    line-height: 1.5;
+p,
+a,
+li {
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: var(--para-color);
+  line-height: 1.5;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* layout */
 
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 9.6rem 2.4rem;
+}
 
+.grid {
+  display: grid;
+}
+
+.grid-two-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
 
 /* module / reuseable  */
-
-
 
 /* theme  */
 
@@ -49,3 +74,112 @@ p,a,li{
   --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   --footer-bg-color: #040d12;
 }
+
+/***** Navbar Section *****/
+
+.section-navbar {
+  width: 100%;
+  background-color: var(--white-color);
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  height: auto;
+}
+
+.section-navbar .container {
+  padding: 1.8rem 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-navbar .navbar-brand {
+  height: 4.8rem;
+  width: 20rem;
+  background-image: url("./images/logo.png");
+  background-size: cover;
+}
+
+.section-navbar .navbar ul {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.section-navbar .navbar ul li a {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--heading-color);
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    bottom: -0.3rem;
+    border-bottom: 2px solid var(--main-color);
+    transition: all 0.3s linear;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+/***** End Navbar Section *****/
+
+/***** Hero Section *****/
+
+main {
+  background: linear-gradient(
+    to top right,
+    #3d86fa,
+    #4484fb,
+    #679eff,
+    #b3d2ff,
+    #ebf3fe
+  );
+}
+
+.section-hero {
+  & .grid {
+    align-items: center;
+  }
+
+  & .section-hero-content .hero-subHeading {
+    letter-spacing: 0.2rem;
+    word-spacing: 0.2rem;
+    color: var(--hero-heading-color);
+    font-weight: 700;
+  }
+
+  & .section-hero-content .hero-heading {
+    color: var(--hero-heading-color);
+    line-height: 1.5;
+    font-weight: 900;
+    font-family: "Jost";
+    font-size: 6rem;
+  }
+
+  & .section-hero-content .hero-para{
+    color: var(--white-color);
+    margin: 1.2rem 0 2.4rem;
+  }
+
+  & .btn{
+    display: inline-block;
+    background-color: var(--main-color);
+    padding: 1.2rem 2.4rem;
+  }
+
+  & .section-hero-img figure img {
+    height: auto;
+    width: 100%;
+    transform: scaleX(-1);
+  }
+
+  
+}
+
+/***** End Hero Section *****/
