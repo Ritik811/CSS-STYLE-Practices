@@ -56,19 +56,31 @@ a {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.grid-three-cols{
-  grid-template-columns: repeat(3,1fr);
+.grid-three-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.fa-solid {
+  font-size: 2.4rem;
+  padding: 2.4rem;
+  border-radius: 50%;
+  background-color: var(--supporting-color);
+  color: var(--hero-heading-color);
 }
 
 /* module / reuseable  */
 
-.section-common-heading{
+.section-common-heading {
   font-size: 3.2rem;
   font-weight: 700;
   text-transform: capitalize;
 }
 
-.section-common-title{
+.section-common-title {
   font-size: 2rem;
   margin: 2rem 0 1.2rem;
 }
@@ -200,12 +212,12 @@ main {
     font-size: 5.8rem;
   }
 
-  & .section-hero-content .hero-para{
+  & .section-hero-content .hero-para {
     color: var(--white-color);
     margin: 2rem 0 4.2rem;
   }
 
-  & .hero-btn .btn{
+  & .hero-btn .btn {
     display: inline-block;
     background-color: var(--main-color);
     color: white;
@@ -213,8 +225,7 @@ main {
     padding: 1.2rem 3.2rem;
     box-shadow: var(--btn-box-shadow);
 
-
-    &:hover{
+    &:hover {
       background-color: var(--bnt-hover-bg-color);
       cursor: pointer;
     }
@@ -225,22 +236,18 @@ main {
     width: 100%;
     transform: scaleX(-1);
   }
-
-  
 }
 
 /***** End Hero Section *****/
 
-
-/***** About Section *****/ 
+/***** About Section *****/
 
 .section-about {
-
-  & .grid{
+  & .grid {
     gap: 6.3rem;
   }
 
-  & .about-div{
+  & .about-div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -248,7 +255,7 @@ main {
     text-align: center;
   }
 
-  & .about-div img{
+  & .about-div img {
     width: 15rem;
     aspect-ratio: 1;
     padding: 2.4rem;
@@ -256,16 +263,57 @@ main {
     background-color: var(--supporting-color);
     transition: all 0.3s linear;
 
-    &:hover{
+    &:hover {
       rotate: 360deg;
       cursor: pointer;
       background-color: var(--main-color);
     }
   }
-
-  
-
 }
 
-
 /***** End About Section *****/
+
+.section-course {
+  background-color: var(--bg-color);
+  & .grid {
+    gap: 6.4rem;
+  }
+
+  & .course-div {
+    padding: 3.2rem;
+
+    &:hover {
+      box-shadow: var(--btn-box-shadow);
+    }
+  }
+
+  & .course-div:nth-child(2) .icon .fa-solid {
+    color: #68bf9b;
+    background-color: #e7f6ef;
+  }
+
+  & .course-div:nth-child(3) .icon .fa-solid {
+    color: #ff8b52;
+    background-color: #fbebe8;
+  }
+
+  & .course-div:nth-child(4) .icon .fa-solid {
+    color: #183d3d;
+    background-color: #ccf7f7;
+  }
+
+  & .course-div:nth-child(5) .icon .fa-solid {
+    color: #d988b9;
+    background-color: rgb(247, 223, 238);
+  }
+
+  & .course-div:nth-child(6) .icon .fa-solid {
+    color: #ff9b50;
+    background-color: #f6dfce;
+  }
+
+  & .course-div:nth-child(7) .icon .fa-solid {
+    color: #1450a3;
+    background-color: #dce9fa;
+  }
+}
