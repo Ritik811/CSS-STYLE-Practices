@@ -56,7 +56,22 @@ a {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.grid-three-cols{
+  grid-template-columns: repeat(3,1fr);
+}
+
 /* module / reuseable  */
+
+.section-common-heading{
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.section-common-title{
+  font-size: 2rem;
+  margin: 2rem 0 1.2rem;
+}
 
 /* theme  */
 
@@ -132,6 +147,7 @@ a {
 /***** Hero Section *****/
 
 main {
+  position: relative;
   background: linear-gradient(
     to top right,
     #3d86fa,
@@ -142,6 +158,27 @@ main {
   );
 }
 
+.custom-shape-divider-bottom-1696162272 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1696162272 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 12rem;
+}
+
+.custom-shape-divider-bottom-1696162272 .shape-fill {
+  fill: #ffffff;
+}
+
 .section-hero {
   & .grid {
     align-items: center;
@@ -150,6 +187,7 @@ main {
   & .section-hero-content .hero-subHeading {
     letter-spacing: 0.2rem;
     word-spacing: 0.2rem;
+    font-size: 1.7rem;
     color: var(--hero-heading-color);
     font-weight: 700;
   }
@@ -159,18 +197,27 @@ main {
     line-height: 1.5;
     font-weight: 900;
     font-family: "Jost";
-    font-size: 6rem;
+    font-size: 5.8rem;
   }
 
   & .section-hero-content .hero-para{
     color: var(--white-color);
-    margin: 1.2rem 0 2.4rem;
+    margin: 2rem 0 4.2rem;
   }
 
-  & .btn{
+  & .hero-btn .btn{
     display: inline-block;
     background-color: var(--main-color);
-    padding: 1.2rem 2.4rem;
+    color: white;
+    border-radius: 0.6rem;
+    padding: 1.2rem 3.2rem;
+    box-shadow: var(--btn-box-shadow);
+
+
+    &:hover{
+      background-color: var(--bnt-hover-bg-color);
+      cursor: pointer;
+    }
   }
 
   & .section-hero-img figure img {
@@ -183,3 +230,42 @@ main {
 }
 
 /***** End Hero Section *****/
+
+
+/***** About Section *****/ 
+
+.section-about {
+
+  & .grid{
+    gap: 6.3rem;
+  }
+
+  & .about-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  & .about-div img{
+    width: 15rem;
+    aspect-ratio: 1;
+    padding: 2.4rem;
+    border-radius: 50%;
+    background-color: var(--supporting-color);
+    transition: all 0.3s linear;
+
+    &:hover{
+      rotate: 360deg;
+      cursor: pointer;
+      background-color: var(--main-color);
+    }
+  }
+
+  
+
+}
+
+
+/***** End About Section *****/
