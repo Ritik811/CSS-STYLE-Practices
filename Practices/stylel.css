@@ -48,6 +48,33 @@ a {
   padding: 9.6rem 2.4rem;
 }
 
+:is(
+    .section-about,
+    .section-blog,
+    .section-contact,
+    .section-course,
+    .section-why-choose,
+    .section-contact-home,
+
+  )
+  .container:first-child {
+  padding: 6.4rem 2.4rem 2.4rem 2.4rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 0.6rem;
+    padding: 1.2rem 3.2rem;
+    box-shadow: var(--btn-box-shadow);
+
+    &:hover {
+      background-color: var(--bnt-hover-bg-color);
+      cursor: pointer;
+    }
+  }
+
 .grid {
   display: grid;
 }
@@ -229,19 +256,7 @@ main {
     margin: 2rem 0 4.2rem;
   }
 
-  & .hero-btn .btn {
-    display: inline-block;
-    background-color: var(--main-color);
-    color: white;
-    border-radius: 0.6rem;
-    padding: 1.2rem 3.2rem;
-    box-shadow: var(--btn-box-shadow);
-
-    &:hover {
-      background-color: var(--bnt-hover-bg-color);
-      cursor: pointer;
-    }
-  }
+  
 
   & .section-hero-img figure img {
     height: auto;
@@ -428,6 +443,50 @@ main {
 }
 
 /***** End Why Choose Section *****/
+
+/***** Contact Home Page Section *****/ 
+
+.section-contact-home{
+  width: 60%;
+  min-height: 30rem;
+  margin: 0 auto;
+  box-shadow: var(--btn-box-shadow);
+  margin-bottom: 5rem;
+
+  & .grid{
+    gap: 6.4rem;
+  }
+
+  & .contact-content h2{
+    font-size: 3.8rem;
+    line-height: 1.2;
+  }
+
+  & .contact-content p{
+    margin: 1.2rem 0 2.3rem;
+  }
+
+  & a{
+    color: var(--white-color);
+  }
+
+  & .fa-solid{
+    padding: 0;
+    background-color: var(--main-color);
+    color: var(--white-color);
+  }
+
+  & img{
+    width: 90%;
+    height: auto;
+  }
+
+}  
+
+/***** End Contact Home Page Section *****/
+
+
+
 
 
 
