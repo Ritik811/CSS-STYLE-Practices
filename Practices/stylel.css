@@ -24,7 +24,7 @@ h6 {
 
 p,
 a,
-li {
+li,label {
   font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
@@ -68,10 +68,12 @@ a {
   border-radius: 0.6rem;
   padding: 1.2rem 3.2rem;
   box-shadow: var(--btn-box-shadow);
+  transition: all 0.3s linear;
 
   &:hover {
     background-color: var(--bnt-hover-bg-color);
     cursor: pointer;
+    border-radius: 1rem;
   }
 }
 
@@ -482,6 +484,97 @@ main {
 }
 
 /***** End Contact Home Page Section *****/
+
+/***** Contact Section *****/ 
+
+.section-contact{
+
+  & .grid{
+    gap: 6.4rem;
+  }
+
+  & .contact-content{
+    gap: 6.4rem;
+  }
+
+
+  & .btn-contact{
+    padding: 1.2rem 3.2rem;
+    font-size: 1.8rem;
+  }
+  
+
+  & label{
+    display: block;
+  }
+
+  & input,textarea{
+    padding: 1.2rem 2.3rem;
+    width: 100%;
+    font-size: 1.8rem;
+    transition: all 0.3s linear;
+  }
+  
+
+  & .mb-3{
+    margin-bottom: 3rem;
+  }
+
+  & input:focus-visible,textarea:focus-visible{
+    border-radius: 1rem;
+  }
+
+}
+
+/***** End Contact Section *****/
+
+
+
+
+/***** Blogs Section *****/ 
+
+.section-blog{
+
+  .grid{
+    gap: 6.4rem;
+  }
+
+  & .blog{
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+    box-shadow: var(--btn-box-shadow);
+    transition: all 0.3s linear;
+    &:hover{
+      scale: 1.1;
+    }
+  }
+
+  & .blog-content{
+    padding: 1.2rem 2.4rem 2.4rem;
+  }
+
+  & .blog-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .fa-solid{
+      font-size: 2.4rem;
+      padding: 0;
+    }
+  }
+
+  & .blog img{
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+/***** End Blogs Section *****/
+
+
 
 /***** Footer Section *****/
 
