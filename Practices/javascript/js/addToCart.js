@@ -1,4 +1,7 @@
 import { getCartProductFromLSd } from "./getCartProduct.js";
+import { updateCardValue } from "./updateCardValue.js";
+
+getCartProductFromLSd();
 
 export const addToCart = (evt, id, stock) => {
   const currCardElement = document.querySelector(`#card${id}`);
@@ -13,6 +16,8 @@ export const addToCart = (evt, id, stock) => {
   let existingProduct = arrLocalStorageProduct.find(
     (curEle) => curEle.id === id,
   );
+
+  if (existingProduct && quantity <= 1) return;
 
   if (existingProduct && quantity > 1) {
     console.log("I am Come");
@@ -43,8 +48,9 @@ export const addToCart = (evt, id, stock) => {
   }
 
   price = (quantity * price).toFixed(2);
-  
 
   arrLocalStorageProduct.push({ id, price, quantity });
   localStorage.setItem("cartProductLS", JSON.stringify(arrLocalStorageProduct));
+
+  updateCardValue(arrLocalStorageProduct.length);
 };
